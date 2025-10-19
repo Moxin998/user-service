@@ -75,27 +75,17 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
+                <version>2.7.6</version> <!-- 根据你的Spring Boot版本调整 -->
                 <configuration>
+                    <!-- 明确指定主类 -->
                     <mainClass>com.moxin.moxincreateuser.MoxinCreateUserApplication</mainClass>
-                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>repackage</id>
                         <goals>
+                            <!-- 这个goal会重新打包成可执行的jar -->
                             <goal>repackage</goal>
                         </goals>
                     </execution>
@@ -103,5 +93,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
